@@ -1,7 +1,7 @@
 # SMART
 Repositório voltado para a disciplina: Projeto de Desenvolvimento de Sistemas (2019-1)
 
-Objetivos deste documento
+# Objetivos deste documento
 Autorizar o início do projeto, atribuir principais responsáveis e descrever de forma clara requisitos iniciais, principais entregas, premissas e restrições do projeto.
 
 Situação atual e justificativa do projeto
@@ -178,7 +178,7 @@ R$10.000
 Pagamento final ao mestre-de-obras pela conclusão da reforma
 
 
-Aprovações
+# Aprovações
 Participante
 Assinatura
 Data
