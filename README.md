@@ -5,20 +5,18 @@ Repositório voltado para a disciplina: Projeto de Desenvolvimento de Sistemas (
 Autorizar o início do projeto, atribuir principais responsáveis e descrever de forma clara requisitos iniciais, principais entregas, premissas e restrições do projeto.
 
 # Situação atual e justificativa do projeto
-[Passado, onde está. Descreva a situação atual e o que motivou a realização do projeto. ]
 
 O engenheiro Lucas Napoli começou a empreender em seu próprio negocio em reformas e formulações de projetos , em determinado momento identificou a necessidade de automatizar a sua forma de Desenvolver orçamentos para diminuir o tempo gasto com esta parte de seu negocio  e em seu gerenciamento para o acompanhamento financeiro de gastos das obras pelos seus clientes .
 
 # Objetivos SMART e critérios de sucesso do projeto
-[Futuro, onde quer chegar. Descreva os benefícios esperados detalhando de forma clara objetivos SMART e critérios de sucesso relacionados.
-SMART: Specific: Específico, Measurable: Indicador e meta, Assignable: Quem, Realistic: realístico, Time-related: Quando]
+
 O projeto será considerado um sucesso caso os objetivos abaixo sejam atingidos:
 Conclusão do Projeto em até 15/06/2019;
 Conclusão do Desenvolvimento da aplicação em até 15/08/2019;
 Concluir o projeto e o desenvolvimento  da aplicação com o orçamento de R$40.000,00.
 
 # Estrutura Analítica do Projeto – Fases e principais entregas
-[Inclua uma versão inicial da Estrutura Analítica do Projeto (EAP) com as fases do projeto e suas principais entregas. ]
+
 Iniciação
 Levantamento de Requisito
 Planejamento
@@ -33,9 +31,7 @@ Teste de Todas as Ferramentas Desenvolvidas
 Encerramento
 Entrega da Aplicação ao cliente
 
-Principais requisitos das principais entregas/produtos
-[Documente os principais requisitos dos produtos/entregas a serem atendidos identificados na EAP acima. ]
-
+Principais requisitos das principais entregas/produto
 Após a reunião com o Engenheiro Responsável foi definido as seguintes entregas e produtos.
 O projeto ficou dividido nas seguintes fases detalhadas abaixo:
 Projeto de Software: Detalhamento e desenvolvimento completo de todo o projeto para atender o problema descrito em reunião para a Aplicação Orçamento.
