@@ -10,6 +10,7 @@ Repositório voltado para a disciplina: Projeto de Desenvolvimento de Sistemas (
 
    <h3>Objetivos SMART e critérios de sucesso do projeto</h3>
     <p>SMART:</p>
+    
     O projeto será considerado um sucesso caso os objetivos abaixo sejam atingidos:
           • Conclusão do Projeto em até 15/06/2019;
           • Conclusão do Desenvolvimento da aplicação em até 15/08/2019;
