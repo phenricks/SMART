@@ -2,8 +2,8 @@
 
 Repositório voltado para a disciplina: Projeto de Desenvolvimento de Sistemas (2019-1)
 
-    <h4>Objetivos deste documento</h4>
-Autorizar o início do projeto, atribuir principais responsáveis e descrever de forma clara requisitos iniciais, principais entregas, premissas e restrições do projeto.
+#   Objetivos deste documento
+  Autorizar o início do projeto, atribuir principais responsáveis e descrever de forma clara requisitos iniciais, principais entregas, premissas e restrições do projeto.
 
     <h3> Situação atual e justificativa do projeto</h3>
 
