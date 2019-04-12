@@ -9,7 +9,7 @@ Repositório voltado para a disciplina: Projeto de Desenvolvimento de Sistemas (
         O engenheiro Lucas Napoli começou a empreender em seu próprio negocio em reformas e formulações de projetos , em determinado momento identificou a necessidade de automatizar a sua forma de Desenvolver orçamentos para diminuir o tempo gasto com esta parte de seu negocio  e em seu gerenciamento para o acompanhamento financeiro de gastos das obras pelos seus clientes.
 
    <h3>Objetivos SMART e critérios de sucesso do projeto</h3>
-    SMART: 
+    <p>SMART:</p>
     O projeto será considerado um sucesso caso os objetivos abaixo sejam atingidos:
           • Conclusão do Projeto em até 15/06/2019;
           • Conclusão do Desenvolvimento da aplicação em até 15/08/2019;
