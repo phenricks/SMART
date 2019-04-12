@@ -112,6 +112,20 @@ O projeto ficou dividido nas seguintes fases detalhadas abaixo:
 Levantamento de Requisitos<p>feito de Forma errônea.|Atrasar a conclusão do Projeto e o Inicio do Desenvolvimento da Aplicação|  Mitigar  | Acompanhamento diário do Cliente em inicio do Projeto na fase de levantamento de Requisito | Sr.Osmar Fagundes Tamagnoni | Inicio do Projeto</p> |
 |  Possível licença de Analista de Projetos Responsável | Atrasar a conclusão do Projeto e o Inicio do Desenvolvimento da Aplicação | Mitigar |  Ter mais de um Analista de Projetos Responsável pelo Desenvolvimento do Projeto | Sr. Osmar Fagundes Tamagnoni |  Inicio do Projeto |
 | Falta de Mão de Obra qualificada para Desenvolvimento | Atraso na Entrega da Aplicação. | Mitigar | Ao assinar o contrato iniciar os processos seletivos gerenciados por empresa de RH. | Sr.Osmar Fagundes Tamagnoni | Durante o Desenvolvimento |
+
+
+<h3>Orçamento do Projeto</h3>
+      O orçamento total para a reforma era de R$100.000,00 e a duração do projeto previsto de 3 meses.
+   
+   
+| Período              | Orçado  |          Comentários                                         |
+|----------------------|---------|--------------------------------------------------------------|
+|20/04/2019-20/05/2019 | R$3.000 | Projeto de Aplicação de Orçamento                            |
+|20/04/2019-15/06/2019 | R$3.000 | Projeto de Aplicação de Acompanhamento de Cliente            |
+|20/06/2019-15/08/2019 | R$12.000| Compras de materiais e pagamentos para o mestre-de-obras     |
+|20/06/2019-15/08/2019 | R$12.000| Compras de materiais e pagamentos para o mestre-de-obras     |
+|     15/08/2019       | R$10.000| Pagamento final ao mestre-de-obras pela conclusão da reforma |
+
   
             
 # Integrantes:
