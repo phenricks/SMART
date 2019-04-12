@@ -3,35 +3,36 @@
 Repositório voltado para a disciplina: Projeto de Desenvolvimento de Sistemas (2019-1)
 
     Objetivos deste documento
-  Autorizar o início do projeto, atribuir principais responsáveis e descrever de forma clara requisitos iniciais, principais entregas, premissas e restrições do projeto.
+    
+         Autorizar o início do projeto, atribuir principais responsáveis e descrever de forma clara requisitos iniciais, principais entregas, premissas e restrições do projeto.
 
      Situação atual e justificativa do projeto
-
-   O engenheiro Lucas Napoli começou a empreender em seu próprio negocio em reformas e formulações de projetos , em determinado momento identificou a necessidade de automatizar a sua forma de Desenvolver orçamentos para diminuir o tempo gasto com esta parte de seu negocio  e em seu gerenciamento para o acompanhamento financeiro de gastos das obras pelos seus clientes.
+     
+         O engenheiro Lucas Napoli começou a empreender em seu próprio negocio em reformas e formulações de projetos , em determinado momento identificou a necessidade de automatizar a sua forma de Desenvolver orçamentos para diminuir o tempo gasto com esta parte de seu negocio  e em seu gerenciamento para o acompanhamento financeiro de gastos das obras pelos seus clientes.
 
       Objetivos SMART e critérios de sucesso do projeto
 
-SMART: 
+    SMART: 
+    O projeto será considerado um sucesso caso os objetivos abaixo sejam atingidos:
+          • Conclusão do Projeto em até 15/06/2019;
+          • Conclusão do Desenvolvimento da aplicação em até 15/08/2019;
+          • Concluir o projeto e o desenvolvimento  da aplicação com o orçamento de R$40.000,00.
 
-O projeto será considerado um sucesso caso os objetivos abaixo sejam atingidos:
-    • Conclusão do Projeto em até 15/06/2019;
-    • Conclusão do Desenvolvimento da aplicação em até 15/08/2019;
-    • Concluir o projeto e o desenvolvimento  da aplicação com o orçamento de R$40.000,00.
-
-Estrutura Analítica do Projeto – Fases e principais entregas
-    • Iniciação
-        ◦ Levantamento de Requisito
-    • Planejamento
-    • Desenvolvimento do Projeto de Software
-    • Execução
-        ◦ Contratação Desenvolvedores
-        ◦ Desenvolvimento da Aplicação
-    • Monitoramento
-    • Acompanhamento do Desenvolvimento do Projeto
-    • Acompanhamento do Desenvolvimento da Aplicação
-    • Teste de Todas as Ferramentas Desenvolvidas
-    • Encerramento
-    • Entrega da Aplicação ao cliente
+    Estrutura Analítica do Projeto – Fases e principais entregas
+    
+        • Iniciação
+                ◦ Levantamento de Requisito
+        • Planejamento
+                • Desenvolvimento do Projeto de Software
+        • Execução
+                ◦ Contratação Desenvolvedores
+                ◦ Desenvolvimento da Aplicação
+        • Monitoramento
+                • Acompanhamento do Desenvolvimento do Projeto
+                • Acompanhamento do Desenvolvimento da Aplicação
+                • Teste de Todas as Ferramentas Desenvolvidas
+        • Encerramento
+                • Entrega da Aplicação ao cliente
     
  Principais requisitos das principais entregas/produtos
 
