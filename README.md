@@ -126,6 +126,20 @@ Levantamento de Requisitos<p>feito de Forma errônea.|Atrasar a conclusão do Pr
 |20/06/2019-15/08/2019 | R$12.000| Compras de materiais e pagamentos para o mestre-de-obras     |
 |     15/08/2019       | R$10.000| Pagamento final ao mestre-de-obras pela conclusão da reforma |
 
+
+
+
+|                       Aprovações                    |
+-
+
+|     Participante         |    Assinatura                  |    Data    |
+|--------------------------|--------------------------------|------------|
+|  Patrocinador do Projeto | Sr.Lucas Napoli                | 20/04/2019 |
+|  Gerente do Projeto      | Sr. Osmar Fagundes Tamagnoni   | 20/04/2019 |
+|  Gerente do Projeto      | Sr. Marco Aurélio de Casro     | 20/04/2019 |
+|  Gerente do Projeto      | Sr. Pedro Henrique da Silva    | 20/04/2019 |
+
+
   
             
 # Integrantes:
