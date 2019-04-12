@@ -11,8 +11,10 @@ Repositório voltado para a disciplina: Projeto de Desenvolvimento de Sistemas (
 
       Objetivos SMART e critérios de sucesso do projeto
 
-SMART: Specific: Específico, Measurable: Indicador e meta, Assignable: Quem, Realistic: realístico, Time-related: Quando]
+SMART: 
+
 O projeto será considerado um sucesso caso os objetivos abaixo sejam atingidos:
+
     • Conclusão do Projeto em até 15/06/2019;
     • Conclusão do Desenvolvimento da aplicação em até 15/08/2019;
     • Concluir o projeto e o desenvolvimento  da aplicação com o orçamento de R$40.000,00.
@@ -41,31 +43,31 @@ O projeto ficou dividido nas seguintes fases detalhadas abaixo:
     • Desenvolvimento da Aplicação Orçamento: Desenvolvimento da aplicação WEB para automatização de Orçamentos.
     • Desenvolvimento da Aplicação Acompanhamento de Cliente: Desenvolvimento da aplicação WEB para o acompanhamento financeiro dos clientes. 
     
-    • Projeto de Software
+   • Projeto de Software
         ◦ Levantamento de Requisitos
             ▪ Levantamento de todos os requisitos para a Aplicação de Orçamento com o cliente.
             ▪ Levantamento de todos os requisitos para a Aplicação de Acompanhamento de Clientes com o cliente.
 
-        ◦ Desenvolvimento do Projeto
+   ◦ Desenvolvimento do Projeto
             ▪ Desenvolvimento de Projeto para a Aplicação de Orçamento.
             ▪ Desenvolvimento de Projeto para a Aplicação de Acompanhamento de Clientes.
             ▪ 
-        ◦ Entrega de Projeto
+   ◦ Entrega de Projeto
             ▪ Entrega do Projeto para Aplicação de Orçamento.
             ▪ Entrega do Projeto para Aplicação de Acompanhamento de Clientes.
 
-    • Desenvolvimento de Aplicação
+   • Desenvolvimento de Aplicação
         ◦ Contratação de Mão de Obra
-            ▪ Contratação de Desenvolvedores para Aplicação de Orçamento.   
-                ▪ Contratação de Desenvolvedores para Aplicação de Acompanhamento de Clientes.
+        ▪ Contratação de Desenvolvedores para Aplicação de Orçamento.   
+        ▪ Contratação de Desenvolvedores para Aplicação de Acompanhamento de Clientes.
 
-        ◦ Desenvolvimento da Aplicação
+   ◦ Desenvolvimento da Aplicação
             ▪ Desenvolvimento da Aplicação de Orçamento.
             ▪ Desenvolvimento da Aplicação Acompanhamento de Clientes.
-        ◦ Teste da Aplicação
+   ◦ Teste da Aplicação
             ▪ Teste de Módulos da Aplicação de Orçamento Desenvolvida.
             ▪ Teste de Módulos da Aplicação de Acompanhamento de Clientes Desenvolvida.
-        ◦ Entrega da Aplicação e Implementação
+   ◦ Entrega da Aplicação e Implementação
             ▪ Implementação da Aplicação de Orçamento em Servidor do Cliente  e Entrega.
             ▪ Implementação da Aplicação de Acompanhamento de Clientes em Servidor do Cliente  e Entrega.
             
