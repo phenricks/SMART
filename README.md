@@ -33,18 +33,15 @@ Repositório voltado para a disciplina: Projeto de Desenvolvimento de Sistemas (
                 • Entrega da Aplicação ao cliente
     
  <h3>Principais requisitos das principais entregas/produtos</h3>
-
+ 
 Após a reunião com o Engenheiro Responsável foi definido as seguintes entregas e produtos.
-<p>O projeto ficou dividido nas seguintes fases detalhadas abaixo:</p>
+O projeto ficou dividido nas seguintes fases detalhadas abaixo:
 
-   <p>• Projeto de Software: </p>
-    Detalhamento e desenvolvimento completo de todo o projeto para atender o problema descrito em reunião para a Aplicação Orçamento.
-   <p> • Projeto de Software:</p>
-    Detalhamento e desenvolvimento completo de todo o projeto para atender o problema descrito em reunião para a Aplicação de Acompanhamento de Cliente.
-      <p>• Desenvolvimento da Aplicação Orçamento:</p>
-    Desenvolvimento da aplicação WEB para automatização de Orçamentos.
-      <p>• Desenvolvimento da Aplicação Acompanhamento de Cliente: </p>
-    Desenvolvimento da aplicação WEB para o acompanhamento financeiro dos clientes. 
+    • Projeto de Software: Detalhamento e desenvolvimento completo de todo o projeto para atender o problema descrito em reunião para a Aplicação Orçamento.
+    • Projeto de Software: Detalhamento e desenvolvimento completo de todo o projeto para atender o problema descrito em reunião para a Aplicação de Acompanhamento de Cliente.
+    • Desenvolvimento da Aplicação Orçamento: Desenvolvimento da aplicação WEB para automatização de Orçamentos.
+    • Desenvolvimento da Aplicação Acompanhamento de Cliente: Desenvolvimento da aplicação WEB para o acompanhamento financeiro dos clientes.  
+    
     
     • Projeto de Software
         ◦ Levantamento de Requisitos
