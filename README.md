@@ -32,40 +32,41 @@ Repositório voltado para a disciplina: Projeto de Desenvolvimento de Sistemas (
         • Encerramento
                 • Entrega da Aplicação ao cliente
     
- Principais requisitos das principais entregas/produtos
+ <h3>Principais requisitos das principais entregas/produtos</h3>
 
 Após a reunião com o Engenheiro Responsável foi definido as seguintes entregas e produtos.
 O projeto ficou dividido nas seguintes fases detalhadas abaixo:
+
     • Projeto de Software: Detalhamento e desenvolvimento completo de todo o projeto para atender o problema descrito em reunião para a Aplicação Orçamento.
     • Projeto de Software: Detalhamento e desenvolvimento completo de todo o projeto para atender o problema descrito em reunião para a Aplicação de Acompanhamento de Cliente.
     • Desenvolvimento da Aplicação Orçamento: Desenvolvimento da aplicação WEB para automatização de Orçamentos.
     • Desenvolvimento da Aplicação Acompanhamento de Cliente: Desenvolvimento da aplicação WEB para o acompanhamento financeiro dos clientes. 
     
-   • Projeto de Software
+    • Projeto de Software
         ◦ Levantamento de Requisitos
             ▪ Levantamento de todos os requisitos para a Aplicação de Orçamento com o cliente.
             ▪ Levantamento de todos os requisitos para a Aplicação de Acompanhamento de Clientes com o cliente.
 
-   ◦ Desenvolvimento do Projeto
+    ◦ Desenvolvimento do Projeto
             ▪ Desenvolvimento de Projeto para a Aplicação de Orçamento.
             ▪ Desenvolvimento de Projeto para a Aplicação de Acompanhamento de Clientes.
             ▪ 
-   ◦ Entrega de Projeto
+    ◦  Entrega de Projeto
             ▪ Entrega do Projeto para Aplicação de Orçamento.
             ▪ Entrega do Projeto para Aplicação de Acompanhamento de Clientes.
 
-   • Desenvolvimento de Aplicação
+    • Desenvolvimento de Aplicação
         ◦ Contratação de Mão de Obra
         ▪ Contratação de Desenvolvedores para Aplicação de Orçamento.   
         ▪ Contratação de Desenvolvedores para Aplicação de Acompanhamento de Clientes.
 
-   ◦ Desenvolvimento da Aplicação
+    ◦ Desenvolvimento da Aplicação
             ▪ Desenvolvimento da Aplicação de Orçamento.
             ▪ Desenvolvimento da Aplicação Acompanhamento de Clientes.
-   ◦ Teste da Aplicação
+    ◦ Teste da Aplicação
             ▪ Teste de Módulos da Aplicação de Orçamento Desenvolvida.
             ▪ Teste de Módulos da Aplicação de Acompanhamento de Clientes Desenvolvida.
-   ◦ Entrega da Aplicação e Implementação
+    ◦ Entrega da Aplicação e Implementação
             ▪ Implementação da Aplicação de Orçamento em Servidor do Cliente  e Entrega.
             ▪ Implementação da Aplicação de Acompanhamento de Clientes em Servidor do Cliente  e Entrega.
             
