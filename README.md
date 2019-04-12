@@ -41,8 +41,10 @@ Após a reunião com o Engenheiro Responsável foi definido as seguintes entrega
     Detalhamento e desenvolvimento completo de todo o projeto para atender o problema descrito em reunião para a Aplicação Orçamento.
    <p> • Projeto de Software:</p>
     Detalhamento e desenvolvimento completo de todo o projeto para atender o problema descrito em reunião para a Aplicação de Acompanhamento de Cliente.
-    • Desenvolvimento da Aplicação Orçamento: Desenvolvimento da aplicação WEB para automatização de Orçamentos.
-    • Desenvolvimento da Aplicação Acompanhamento de Cliente: Desenvolvimento da aplicação WEB para o acompanhamento financeiro dos clientes. 
+      <p>• Desenvolvimento da Aplicação Orçamento:</p>
+    Desenvolvimento da aplicação WEB para automatização de Orçamentos.
+      <p>• Desenvolvimento da Aplicação Acompanhamento de Cliente: </p>
+    Desenvolvimento da aplicação WEB para o acompanhamento financeiro dos clientes. 
     
     • Projeto de Software
         ◦ Levantamento de Requisitos
