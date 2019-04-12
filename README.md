@@ -14,7 +14,6 @@ Repositório voltado para a disciplina: Projeto de Desenvolvimento de Sistemas (
 SMART: 
 
 O projeto será considerado um sucesso caso os objetivos abaixo sejam atingidos:
-
     • Conclusão do Projeto em até 15/06/2019;
     • Conclusão do Desenvolvimento da aplicação em até 15/08/2019;
     • Concluir o projeto e o desenvolvimento  da aplicação com o orçamento de R$40.000,00.
