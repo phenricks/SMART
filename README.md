@@ -35,7 +35,7 @@ Repositório voltado para a disciplina: Projeto de Desenvolvimento de Sistemas (
  <h3>Principais requisitos das principais entregas/produtos</h3>
 
 Após a reunião com o Engenheiro Responsável foi definido as seguintes entregas e produtos.
-O projeto ficou dividido nas seguintes fases detalhadas abaixo:
+<p>O projeto ficou dividido nas seguintes fases detalhadas abaixo:</p>
 
     • Projeto de Software: 
     Detalhamento e desenvolvimento completo de todo o projeto para atender o problema descrito em reunião para a Aplicação Orçamento.
