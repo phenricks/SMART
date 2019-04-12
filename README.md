@@ -2,13 +2,11 @@
 
 Repositório voltado para a disciplina: Projeto de Desenvolvimento de Sistemas (2019-1)
 
-    Objetivos deste documento
-    
-         Autorizar o início do projeto, atribuir principais responsáveis e descrever de forma clara requisitos iniciais, principais entregas, premissas e restrições do projeto.
+   <h3>Objetivos deste documento</h3>  
+        Autorizar o início do projeto, atribuir principais responsáveis e descrever de forma clara requisitos iniciais, principais entregas, premissas e restrições do projeto.
 
-     Situação atual e justificativa do projeto
-     
-         O engenheiro Lucas Napoli começou a empreender em seu próprio negocio em reformas e formulações de projetos , em determinado momento identificou a necessidade de automatizar a sua forma de Desenvolver orçamentos para diminuir o tempo gasto com esta parte de seu negocio  e em seu gerenciamento para o acompanhamento financeiro de gastos das obras pelos seus clientes.
+   <h3>Situação atual e justificativa do projeto</h3>
+        O engenheiro Lucas Napoli começou a empreender em seu próprio negocio em reformas e formulações de projetos , em determinado momento identificou a necessidade de automatizar a sua forma de Desenvolver orçamentos para diminuir o tempo gasto com esta parte de seu negocio  e em seu gerenciamento para o acompanhamento financeiro de gastos das obras pelos seus clientes.
 
       Objetivos SMART e critérios de sucesso do projeto
 
