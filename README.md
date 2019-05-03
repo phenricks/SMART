@@ -4,7 +4,8 @@ Repositório voltado para a disciplina: Projeto de Desenvolvimento de Sistemas (
 
 # Links
   <a href=https://trello.com/b/TiYkQSgo/smart> Backlog <a>
-  <a href=https://kanbanflow.com/board/FBv4jf> Sprint <a>
+  <p>
+  <a href=https://kanbanflow.com/board/FBv4jf> Sprint <a></p>
 
    <h3>Objetivos deste documento</h3>  
         Autorizar o início do projeto, atribuir principais responsáveis e descrever de forma clara requisitos iniciais, principais entregas, premissas e restrições do projeto.
