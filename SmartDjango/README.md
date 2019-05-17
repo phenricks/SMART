@@ -17,27 +17,27 @@ sudo apt-get install python python3
 ```
 
 ```bash
-pip install -U Django
+pip3 install -U Django
 ```
 
 ```bash
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 ```
 
 Para criar as _Migrations_:
 
 ```bash
-python manage.py makemigrations
+python3 manage.py makemigrations
 ```
 
 Para efetivar as _Migrations_ no banco de dados:
 
 ```bash
-python manage.py migrate
+python3 manage.py migrate
 ```
 
 ## Para Executar
 
 ```bash
-python manage.py runserver
+python3 manage.py runserver
 ```
