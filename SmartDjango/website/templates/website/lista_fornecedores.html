@@ -1,0 +1,72 @@
+{% extends "website/_layouts/base.html" %}
+
+{% block title %}Lista de Fornecedores{% endblock %}
+
+{% load id %}
+
+{% block conteudo %}
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Lista de Fornecedores</h5>
+
+          {% if fornecedores|length > 0 %}
+            <p class="card-text">
+              Aqui está a lista de <code>Fornecedores</code> cadastrados.
+            </p>
+
+            <table class="table">
+              <thead class="thead-dark">
+              <tr>
+		<th scope="col">ID</th>
+                <th scope="col">Razão Social</th>
+                <th scope="col">Nome Fantasia</th>
+                <th scope="col">Endereço</th>
+		<th scope="col">CNPJ</th>
+		<th scope="col">E-mail</th>
+                <th scope="col" class="text-center">Ações</th>
+              </tr>
+              </thead>
+              <tbody>
+              {% for fornecedor in fornecedores %}
+                <tr>
+		  <th scope="row">{{ fornecedor.razao_social|id }}</th>
+                  <td>{{ fornecedor.razao_social }}</td>
+                  <td>{{ fornecedor.nome_fantasia }}</td>
+                  <td>{{ fornecedor.cnpj }}</td>
+		  <td>{{ fornecedor.endereço }}</td>
+		  <td>{{ fornecedor.email }}</td>
+                  <td class="text-center">
+                    <a href="{% url 'website:atualiza_fornecedores' pk=fornecedor.id %}"
+                       class="btn btn-primary">
+                      Atualizar
+                    </a>
+                    <a href="{% url 'website:deleta_fornecedor' pk=fornecedor.id %}"
+                      class="btn btn-danger">
+                        Excluir
+                    </a>
+                  </td>
+                </tr>
+              {% endfor %}
+              </tbody>
+            </table>
+        {% else %}
+          <div class="text-center mt-5 mb-5 jumbotron">
+            <h5>Nenhum <code>Fornecedor</code> cadastrado ainda.</h5>
+          </div>
+        {% endif %}
+          <hr />
+          <div class="text-right">
+	    <a href="{% url 'website:index' %}" class="btn btn-outline-primary">Voltar</a>
+            <a href="{% url 'website:cadastra_fornecedor' %}" class="btn btn-primary">
+              Cadastrar Fornecedor
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
