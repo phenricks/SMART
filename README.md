@@ -151,6 +151,7 @@ Levantamento de Requisitos<p>feito de Forma errônea.|Atrasar a conclusão do Pr
 <p>-Osmar Fagundes</p>
 <p>-Marco Aurelio</p>
 <p>-Pedro Henrique</p>
+<p>-João Pedro Morais</p>
 
 # Professor:
 Anderson Theobaldo
