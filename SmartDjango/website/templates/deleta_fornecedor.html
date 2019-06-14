@@ -1,0 +1,26 @@
+{% extends "_layouts/base.html" %}
+
+{% block title %}Exclusão de Fornecedor{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Exclusão de Fornecedor</h5>
+                <p class="card-text">
+                    Você tem certeza que quer excluir o fornecedor <b>{{ fornecedor.razao_social }}</b>?
+                </p>
+            <form method="post">
+                {% csrf_token %}
+                <hr />
+                <div class="text-right">
+                    <a href="{% url 'website:filtra_fornecedor' %}" class="btn btn-outline-danger">
+                        Cancelar
+                    </a>
+                <button class="btn btn-danger">Excluir</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

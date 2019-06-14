@@ -1,89 +1,130 @@
+from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
-from django.views.generic import TemplateView, ListView, UpdateView, CreateView, DeleteView
-from smart.models import Cliente
-from smart.models import Fornecedor
-from website.forms import InsereFornecedorForm
-from website.forms import InsereClienteForm
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.decorators import login_required
+from django.views.generic import TemplateView, View
 
+import io
+from django.http import FileResponse, HttpResponse
+from django.template.loader import get_template
 
-# PÁGINA PRINCIPAL
-# ----------------------------------------------
+from .models import Cliente, Fornecedor, Servicos
+from .forms import FornecedorForm, ClienteForm
+from .filters import FornecedorFilter, ClienteFilter
+from .utils import render_to_pdf
 
-class IndexTemplateView(TemplateView):
-    template_name = "website/index.html"
+class FornecedorPdf(LoginRequiredMixin, View):
+    def get(self, request, *args, **kwargs):
+        fornecedor = Fornecedor.objects.all()
+        template = get_template('pdf_fornecedor.html')
+        context = {
+            "fornecedor_nome_fantasia": fornecedor.nome_fantasia,
+        }
+        html = template.render(context)
+        pdf = render_to_pdf('pdf_fornecedor.html', context)
+        if pdf:
+            response = HttpResponse(pdf, content_type='application/pdf')
+            return response
+        return HttpResponse("Arquivo não encontrado.")
 
+class ClientePdf(LoginRequiredMixin, View):
+    def get(self, request, *args, **kwargs):
+        cliente = Cliente.objects.get()
+        template = get_template('pdf_cliente.html')
+        context = {
+            "cliente_nome": cliente.nome,
+        }
+        html = template.render(context)
+        pdf = render_to_pdf('pdf_cliente.html', context)
+        if pdf:
+            response = HttpResponse(pdf, content_type='application/pdf')
+            return response
+        return HttpResponse("Arquivo não encontrado.")
 
-# LISTA DE CLIENTES
-# ----------------------------------------------
+# HomePage
+#------------------------------------------------------------------------------------------------
+class IndexTemplateView(LoginRequiredMixin, TemplateView):
+    template_name = 'index.html'
+#------------------------------------------------------------------------------------------------
 
-class ClienteListView(ListView):
-    template_name = "website/lista_clientes.html"
-    model = Cliente
-    context_object_name = "clientes"
+# CRUD Fornecedor
+# -----------------------------------------------------------------------------------------------
 
+@login_required
+def create_fornecedor(request):
+    form = FornecedorForm(request.POST or None)
 
-# CADASTRAMENTO DE CLIENTES
-# ----------------------------------------------
+    if form.is_valid():
+        form.save()
+        return redirect('website:filtra_fornecedor')
 
-class ClienteCreateView(CreateView):
-    template_name = "website/cria_cliente.html"
-    model = Cliente
-    form_class = InsereClienteForm
-    success_url = reverse_lazy("website:lista_clientes")
+    return render(request, 'criar_fornecedor.html', {'form': form})
 
+@login_required
+def update_fornecedor(request, id):
+    fornecedor = Fornecedor.objects.get(id=id)
+    form = FornecedorForm(request.POST or None, instance=fornecedor)
 
-# ATUALIZAÇÃO DE CLIENTES
-# ----------------------------------------------
+    if form.is_valid():
+        fornecedor.save()
+        return redirect('website:filtra_fornecedor')
+    
+    return render(request, 'atualiza_fornecedor.html', {'form': form, 'fornecedor': fornecedor})
 
-class ClienteUpdateView(UpdateView):
-    template_name = "website/atualiza_clientes.html"
-    model = Cliente
-    fields = '__all__'
-    context_object_name = 'cliente'
-    success_url = reverse_lazy("website:lista_clientes")
+@login_required
+def delete_fornecedor(request, id):
+    fornecedor = Fornecedor.objects.get(id=id)
 
+    if request.method == 'POST':
+        fornecedor.delete()
+        return redirect('website:filtra_fornecedor')
 
-# EXCLUSÃO DE CLIENTES
-# ----------------------------------------------
+    return render(request, 'deleta_fornecedor.html', {'fornecedor': fornecedor})
 
-class ClienteDeleteView(DeleteView):
-    template_name = "website/exclui_clientes.html"
-    model = Cliente
-    context_object_name = 'cliente'
-    success_url = reverse_lazy("website:lista_clientes")
+@login_required
+def fornecedor_filter(request):
+    lista_fornecedor = Fornecedor.objects.all()
+    filtro_fornecedor = FornecedorFilter(request.GET, queryset=lista_fornecedor)
+    return render(request, 'filtro_fornecedor.html', {'filter': filtro_fornecedor})
+#------------------------------------------------------------------------------------------------
 
-# LISTA DE FORNECEDORES
-# ----------------------------------------------
+# CRUD Cliente
+# -----------------------------------------------------------------------------------------------
 
-class FornecedorListView(ListView):
-    template_name = "website/lista_fornecedores.html"
-    model = Fornecedor
-    context_object_name = "fornecedores"
+@login_required
+def create_cliente(request):
+    form = ClienteForm(request.POST or None)
 
-# CADASTRAMENTO DE FORNECEDORES
-# ----------------------------------------------
+    if form.is_valid():
+        form.save()
+        return redirect('website:filtra_cliente')
 
-class FornecedorCreateView(CreateView):
-    template_name = "website/cria_fornecedor.html"
-    model = Fornecedor
-    form_class = InsereFornecedorForm
-    success_url = reverse_lazy("website:lista_fornecedores")
+    return render(request, 'criar_cliente.html', {'form': form})
 
-# ATUALIZAÇÃO DE CLIENTES
-# ----------------------------------------------
+@login_required
+def update_cliente(request, id):
+    cliente = Cliente.objects.get(id=id)
+    form = ClienteForm(request.POST or None, instance=cliente)
 
-class FornecedorUpdateView(UpdateView):
-    template_name = "website/atualiza_fornecedores.html"
-    model = Fornecedor
-    fields = '__all__'
-    context_object_name = 'fornecedor'
-    success_url = reverse_lazy("website:lista_fornecedores")
+    if form.is_valid():
+        cliente.save()
+        return redirect('website:filtra_cliente')
+    
+    return render(request, 'atualiza_cliente.html', {'form': form, 'cliente': cliente})
 
-# EXCLUSÃO DE FORNECEDORES
-# ----------------------------------------------
+@login_required
+def delete_cliente(request, id):
+    cliente = Cliente.objects.get(id=id)
 
-class FornecedorDeleteView(DeleteView):
-    template_name = "website/exclui_fornecedores.html"
-    model = Fornecedor
-    context_object_name = 'fornecedor'
-    success_url = reverse_lazy("website:lista_fornecedores")
+    if request.method == 'POST':
+        cliente.delete()
+        return redirect('website:filtra_cliente')
+
+    return render(request, 'deleta_cliente.html', {'cliente': cliente})
+
+@login_required
+def cliente_filter(request):
+    lista_cliente = Cliente.objects.all()
+    filtro_cliente = ClienteFilter(request.GET, queryset=lista_cliente)
+    return render(request, 'filtro_cliente.html', {'filter': filtro_cliente})
+#------------------------------------------------------------------------------------------------

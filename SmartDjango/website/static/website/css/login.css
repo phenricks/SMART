@@ -1,0 +1,75 @@
+body,html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-image: url('/../static/website/img/test-smart.jpeg') !important;
+    background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+}
+.user_card {
+    height: 400px;
+    width: 350px;
+    margin-top: auto;
+    margin-bottom: auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 5px;
+    background: rgb(255, 255, 255)
+}
+.brand_logo_container {
+    position: absolute;
+    height: 170px;
+    width: 170px;
+    top: -75px;
+    border-radius: 50%;
+    background: #60a3bc;
+    padding: 10px;
+    text-align: center;
+}
+.brand_logo {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+.form_container {
+    margin-top: 100px;
+}
+.login_container {
+    margin-bottom: 50px;
+}
+.login_btn {
+    width: 100%;
+    background: #60a3bc !important;
+    color: white !important;
+}
+.login_btn:focus {
+    box-shadow: none !important;
+    outline: 0px !important;
+    position: relative;
+}
+.login_container {
+    padding: 0 2rem;
+}
+.asteriskField {
+    display: none;
+}
+form .alert ul li{
+    display: none;
+    list-style: none;
+}
+form .alert ul {
+    display: none;
+    padding: 0;
+    margin: 0;
+}
+.alert {
+    display: none;
+}

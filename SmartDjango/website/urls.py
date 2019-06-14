@@ -1,35 +1,25 @@
-from website.views import IndexTemplateView, ClienteListView, ClienteUpdateView, ClienteCreateView, \
-    ClienteDeleteView, FornecedorListView, FornecedorCreateView, FornecedorUpdateView, FornecedorDeleteView
-
 from django.urls import path
+from django.conf.urls import url
+from django.views.generic import RedirectView
+from .views import create_fornecedor, update_fornecedor, delete_fornecedor, \
+    create_cliente, update_cliente, delete_cliente, IndexTemplateView, \
+    fornecedor_filter, cliente_filter, ClientePdf, FornecedorPdf
 
 app_name = 'website'
 
 urlpatterns = [
-    # GET /
+    path('', RedirectView.as_view(url='/accounts/login/')),
     path('home/', IndexTemplateView.as_view(), name="index"),
+    
+    path('criar/fornecedor/', create_fornecedor, name='criar_fornecedor'),
+    path('filtro/fornecedor', fornecedor_filter, name='filtra_fornecedor'),
+    path('atualiza/fornecedor/<int:id>/', update_fornecedor, name='atualiza_fornecedor'),
+    path('deleta/fornecedor/<int:id>/', delete_fornecedor, name='deleta_fornecedor'),
+    path('fornecedor/pdf/<int:id>/', FornecedorPdf.as_view(), name='fornecedor_pdf'),
 
-    # GET /cliente/cadastrar
-    path('cliente/cadastrar', ClienteCreateView.as_view(), name="cadastra_cliente"),
-
-    # GET /clientes
-    path('clientes/', ClienteListView.as_view(), name="lista_clientes"),
-
-    # GET/POST /cliente/{pk}
-    path('cliente/<pk>', ClienteUpdateView.as_view(), name="atualiza_cliente"),
-
-    # GET/POST /cliente/excluir/{pk}
-    path('cliente/excluir/<pk>', ClienteDeleteView.as_view(), name="deleta_cliente"),
-
-    # GET /fornecedor/cadastrar
-    path('fornecedor/cadastrar', FornecedorCreateView.as_view(), name="cadastra_fornecedor"),
-
-    # GET /fornecedores
-    path('fornecedores/', FornecedorListView.as_view(), name="lista_fornecedores"),
-
-    # GET/POST /fornecedor/{pk}
-    path('fornecedor/<pk>', FornecedorUpdateView.as_view(), name="atualiza_fornecedores"),
-
-    # GET/POST /fornecedor/excluir/{pk}
-    path('fornecedor/excluir/<pk>', FornecedorDeleteView.as_view(), name="deleta_fornecedor"),
+    path('filtro/cliente', cliente_filter, name='filtra_cliente'),
+    path('criar/cliente/', create_cliente, name='criar_cliente'),
+    path('atualiza/cliente/<int:id>/', update_cliente, name='atualiza_cliente'),
+    path('deleta/cliente/<int:id>/', delete_cliente, name='deleta_cliente'),
+    path('cliente/pdf/<pk>/', ClientePdf.as_view(), name='cliente_pdf'),
 ]

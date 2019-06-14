@@ -1,0 +1,26 @@
+{% extends "_layouts/base.html" %}
+
+{% block title %}Deletar Cliente{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Exclusão de Cliente</h5>
+                <p class="card-text">
+                    Você tem certeza que quer excluir o cliente <b>{{ cliente.nome }}</b>?
+                </p>
+                <form method="post">
+                    {% csrf_token %}
+                    <hr />
+                <div class="text-right">
+                    <a href="{% url 'website:filtra_cliente' %}" class="btn btn-outline-danger">
+                        Cancelar
+                    </a>
+                    <button class="btn btn-danger">Excluir</button>
+                </div>
+                </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

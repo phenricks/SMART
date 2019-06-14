@@ -1,0 +1,89 @@
+{% extends "_layouts/base.html" %}
+
+{% load widget_tweaks %}
+
+{% block title %}Atualização de Fornecedor{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Atualizar Dados de <b>{{ fornecedor.razao_social }}</b></h5>
+          <form method="post">
+            {% csrf_token %}
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text">Razão Social</span>
+              </div>
+                {% render_field form.razao_social class+="form-control" %}
+            </div>
+
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text">Nome Fantasia</span>
+              </div>
+                {% render_field form.nome_fantasia class+="form-control" %}
+            </div>
+
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text">CNPJ</span>
+              </div>
+                {% render_field form.cnpj class+="form-control" %}
+            </div>
+            
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text">E-mail</span>
+              </div>
+                {% render_field form.email class+="form-control" %}
+            </div>
+
+	        <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text">Endereço</span>
+              </div>
+                {% render_field form.endereco class+="form-control" %}
+            </div>
+
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text">Complemento</span>
+              </div>
+                {% render_field form.complemento class+="form-control" %}
+            </div>
+
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text">Endereço</span>
+              </div>
+                {% render_field form.cidade class+="form-control" %}
+            </div>
+            
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text">Estado</span>
+              </div>
+                {% render_field form.estado class+="form-control" %}
+            </div>
+
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text">CEP</span>
+              </div>
+                {% render_field form.cep class+="form-control" %}
+            </div>
+            <hr />
+            <div class="text-right">
+              <a href="{% url 'website:filtra_fornecedor' %}" class="btn btn-outline-primary">Voltar</a>
+              <button class="btn btn-primary">Enviar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

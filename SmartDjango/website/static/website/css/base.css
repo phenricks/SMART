@@ -1,0 +1,16 @@
+body {
+  background-image: url('/../static/website/img/back-smart.jpeg') !important;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.asteriskField {
+  color: red;
+}
+
+.col-form-label {
+  font-weight: bold;
+}
