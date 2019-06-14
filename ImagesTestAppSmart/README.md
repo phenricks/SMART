@@ -1,8 +1,9 @@
 # SMART 
 
-Aqui estão inseridos imagens do app rodando com algumas funcionalidades.
+Aqui estão inseridos imagens de teste do app rodando com algumas funcionalidades.
+  Objetivo é simplesmente mostrar a aplicação com prints da mesma.
 
-Podemos ver:
+Podemos ver aqui:
 
 -  Login,
 -  Home(Pagina Inicial),
