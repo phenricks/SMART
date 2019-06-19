@@ -36,6 +36,12 @@ Para efetivar as _Migrations_ no banco de dados:
 python3 manage.py migrate
 ```
 
+Criando SUPERUSER para acesso à aplicação:
+
+```bash
+python3 manage.py createsuperuser
+```
+
 ## Para Executar
 
 ```bash
