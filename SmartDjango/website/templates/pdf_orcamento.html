@@ -145,65 +145,23 @@
   </head>
   <body>
     <header class="clearfix">
-      <h1 class="text-report">SMART - Relatorio Cliente</h1>
+      <h1 class="text-report">SMART - Orçamento {{cliente}}</h1>
       <div id="company" class="clearfix">
         <div><b>SMART</b></div>
         <div>Rua Erê, 207 Prado, Belo Horizonte.</div>
         <div class="text-right">CONTATO: (31) 3775-1486, <a href="mailto:company@example.com">smart@smartmail.com</a> </div>
 
       </div>
-        <hr />
-      <div id="project">
-        <div><span><b>Cliente:</b> </span> {{ cliente }}</div>
-        <div><span><b>Endereço:</b> </span> {{ endereco }} 
-          {{ complemento }}, {{ cidade }} - {{ estado }} - {{ cep }}</div>
-        <div><span><b>E-mail:</b> </span> {{ email }}</div>
-      </div>
         <hr/>
     </header>
     <main>
       <table>
         <thead>
-          <tr>
-            <th class="service">SERVIÇO</th>
-            <th class="desc">DATA DA SOLICITAÇÃO</th>
-            <th>PREÇO</th>
-            <th>X</th>
-            <th>TOTAL</th>
-          </tr>
         </thead>
         <tbody>
-          <tr>
-            <td class="service">TESTE</td>
-            <td class="desc">{{ desde }}</td>
-            <td class="unit"></td>
-            <td class="qty">{{soma}}</td>
-            <td class="total">TESTE</td>
-          </tr>
-          <tr>
-            <td class="service">TESTE</td>
-            <td class="desc">{{ dt_criacao }}</td>
-            <td class="desc">{{ email }}</td>
-            <td class="unit">TESTE</td>
-            <td class="qty">TESTE</td>
-            <td class="total">TESTE</td>
-          </tr>
-          <tr>
-            <td class="service">TESTE</td>
-            <td class="desc">{{ dt_criacao }}</td>
-            <td class="desc">{{ email }}</td>
-            <td class="unit">TESTE</td>
-            <td class="qty">TESTE</td>
-            <td class="total">TESTE</td>
-          </tr>
-          <tr>
-            <td class="service">TESTE</td>
-            <td class="desc">{{ dt_criacao }}</td>
-            <td class="desc">{{ email }}</td>
-            <td class="unit">TESTE</td>
-            <td class="qty">TESTE</td>
-            <td class="total">TESTE</td>
-          </tr>
+            {{servico}} solicitada no dia {{desde}}.<br>
+            O orçamento para os {{metro}}m² com os produtos necessários, do fornecedor
+            {{fornecedor}} é de R${{total}} reais.
         </tbody>
       </table>
         <hr />

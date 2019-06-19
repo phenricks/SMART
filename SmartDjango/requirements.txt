@@ -2,4 +2,5 @@ django
 django-widget-tweaks
 django-crispy-forms
 --pre xhtml2pdf
-reportlab
+django-filter
+django-mathfilters

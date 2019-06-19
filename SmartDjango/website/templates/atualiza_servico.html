@@ -1,0 +1,39 @@
+{% extends "_layouts/base.html" %}
+
+{% load widget_tweaks %}
+
+{% block title %}Smart - Atualização de Serviço{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Atualizar Dados do Serviço <b>{{ servicos.nome }}</b></h5>
+          <form method="post">
+            {% csrf_token %}
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text">Nome</span>
+              </div>
+                {% render_field form.nome class+="form-control" %}
+            </div>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text">Descrição</span>
+              </div>
+                {% render_field form.descricao class+="form-control" %}
+            </div>
+            <hr />
+            <div class="text-right">
+              <a href="{% url 'website:lista_servico' %}" class="btn btn-outline-primary">Voltar</a>
+              <button class="btn btn-primary">Enviar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

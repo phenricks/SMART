@@ -1,26 +1,27 @@
 {% extends "_layouts/base.html" %}
 
-{% block title %}Smart - Deletar Cliente{% endblock %}
+{% block title %}Smart - Exclusão de Servico{% endblock %}
 
 {% block content %}
 <div class="container mt-5">
   <div class="card">
     <div class="card-body">
-      <h5 class="card-title">Exclusão de Cliente</h5>
+      <h5 class="card-title">Exclusão de Servico</h5>
         <p class="card-text">
-          Você tem certeza que quer excluir o cliente <b>{{ cliente.nome }}</b>?
+          Você tem certeza que não iremos mais oferecer 
+          <b>{{ servicos.nome }}</b> como serviço?
         </p>
         <form method="post">
           {% csrf_token %}
-        <hr />
+          <hr />
           <div class="text-right">
-            <a href="{% url 'website:filtra_cliente' %}" class="btn btn-outline-danger">
+            <a href="{% url 'website:lista_servico' %}" class="btn btn-outline-danger">
               Cancelar
             </a>
             <button class="btn btn-danger">Excluir</button>
           </div>
         </form>
+      </div>
     </div>
-  </div>
 </div>
 {% endblock %}

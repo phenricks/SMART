@@ -1,55 +1,261 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-    <head>
-        <title>{% block title %}Relatório - {{ fornecedor_nome }}{% endblock %}</title>
-        {% block content %}
-        <style type="text/css">
-            body {
-                font-weight: 200;
-                font-size: 14px;
+<html lang="en">
+  {% load static %}
+  {% load static tempo_atual %}
+  <head>
+    <meta charset="utf-8">
+    <title>Smart</title>
+      <style type="text/css">
+          .text-report{
+            text-align: center;
+            color: #007cae;
+          }
+          .text-right{
+            text-align: right;
+          }
+          .text-center{
+            text-align: center;
+          }
+          .fixarRodape {
+             bottom: -90;
+             position: fixed;
+             width: 90%;
+             text-align: center;
+          }
+          table .service{
+            text-align:center;
+            vertical-align: top;
+          }
+
+          table th,
+          table td {
+            text-align: center;
+          }
+
+          table td {
+            padding: 20px;
+            text-align: right;
+          }
+          body {
+              position: relative;
+              width: 21px;
+              height: 29.7px;
+              margin: 0 auto;
+              color: #001028;
+              background: #FFFFFF;
+              font-family: Arial, sans-serif;
+              font-size: 12px;
+              font-family: Arial;
+           }
+           header {
+              padding: 10px 0;
+              margin-bottom: 30px;
             }
-            .header {
-                font-size: 20px;
-                font-weight: 100;
-                text-align: center;
-                color: #007cae;
+
+            #logo {
+              text-align: center;
+              margin-bottom: 10px;
             }
-            .title {
-                font-size: 22px;
-                font-weight: 100;
-                /* text-align: right;*/
-                padding: 10px 20px 0px 20px;  
+
+            #logo img {
+              width: 90px;
             }
-            .title span {
-                color: #007cae;
+
+            h1 {
+
+              color: #5D6975;
+              font-size: 2.4em;
+              line-height: 1.4em;
+              font-weight: normal;
+              text-align: center;
             }
-            .details {
-                padding: 10px 20px 0px 20px;
-                text-align: left !important;
-                /*margin-left: 40%;*/
+
+            #project {
+              float: left;
             }
-            .hrItem {
-                border: none;
-                height: 1px;
-                /* Set the hr color */
-                color: #333; /* old IE */
-                background-color: #fff; /* Modern Browsers */
+
+            #project span {
+              color: #5D6975;
+              text-align: right;
+              width: 52px;
+              margin-right: 10px;
+
+              font-size: 0.8em;
             }
-        </style>{% block styles %}{% endblock %}
-    </head>
-    <body>
-        <div class='wrapper'>
-            <div class='header'>
-                <p class='title'>Relatório de Serviços - {{ fornecedor_nome }} </p>
-            </div>
-        <div>
-        <div class='details'>
-            Bill to: <br/>
-            Amount:  <br/>
-            Date: 
-            <hr class='hrItem' />
+
+            #company {
+              float: right;
+              text-align: right;
+            }
+
+            #project div,
+            #company div {
+              white-space: nowrap;
+            }
+
+
+
+            table tr:nth-child(2n-1) td {
+              background: #F5F5F5;
+            }
+
+            table th,
+            table td {
+              text-align: left;
+            }
+
+            table .service,
+            table .desc {
+              text-align: right;
+            }
+
+            table td {
+              padding: 20px;
+              text-align: right;
+            }
+
+            table td.service,
+            table td.desc {
+              vertical-align: top;
+            }
+
+            table td.unit,
+            table td.qty,
+            table td.total {
+                font-size: 1.2em;
+                text-align: right;
+            }
+
+            table td.grand {
+              border-top: 1px solid #5D6975;;
+            }
+
+      </style>
+  </head>
+  <body>
+    <header class="clearfix">
+      <h1 class="text-report">SMART - Relatorio Fornecedor</h1>
+      <div id="company" class="clearfix">
+        <div><b>SMART</b></div>
+        <div>Rua Erê, 207 Prado, Belo Horizonte.</div>
+        <div class="text-right">CONTATO: (31) 3775-1486, <a href="mailto:company@example.com">smart@smartmail.com</a> </div>
+
+      </div>
+        <hr />
+      <div id="project">
+        <div><span><b>Fornecedor:</b> </span> {{ fornecedor }}</div>
+        <div><span><b>Endereço:</b> </span> {{ endereco }}</div>
+        <div><span><b>E-mail:</b> </span> {{ email }}</div>
+      </div>
+        <hr/>
+    </header>
+    <main>
+        <div id="notices">
+            <div><b>Relatorio gerado em: {% tempo_atual %}</b></div>
+      </div>
+
+      <class="texto-termo"><br>
+        <div class="text-center">
+            RELATORIO FORMAL ENTRE SMART E FORNECEDOR<br><br><br><br>
         </div>
-    </div>
-    </body>
+        ___________________ doravante denominada CONTRATANTE e, ___________________, empresa sediada em  Belo Horizonte/ MG,
+        na Rua _________________________________ com registro no cartório de Registro Civil das Pessoas Jurídicas de Belo Horizonte sob o número
+        ___________________ inscrita no CNPJ/MF sob o n° ___________________ doravante denominada CONTRATADA, tem entre si justo e contratado o que abaixo se segue:
+
+
+
+          <br><br><b>Cláusula Primeira:   OBJETO</b><br><br>
+
+
+
+1.1 Constitui objeto do presente contrato a prestação de serviços de assessoria comercial na busca de oportunidades
+          de negócios de serviços de informática.<br><br>
+
+1.2 As atividades acima descritas não tem um caráter limitativo, podendo, a critério da Contratante,
+          serem acrescidas de outras que se fizerem necessárias à assessoria comercial do cliente referido na cláusula anterior,
+          mediante simples comunicação escrita.<br><br>
+
+
+
+<b>Cláusula  Segunda:  PRAZO DO CONTRATO</b><br><br>
+
+
+
+O prazo de vigência do presente CONTRATO é de 12 (doze) meses, contados  a partir da data de sua assinatura, findo o qual, se extingue.
+    A renovação do presente contrato fica condicionada à ocorrência de manifestação expressa e escrita de ambas as partes.<br><br>
+
+
+
+<b>Cláusula  Terceira:   PREÇO</b><br><br>
+
+
+
+3.1  Pela prestação de serviços objeto deste contrato a Contratante pagará à Contratada, pelo período de vigência do contrato,
+        o valor mensal de R$ ............ (.............), mediante apresentação de nota fiscal com a descrição
+        – Assessoria comercial na busca de oportunidades de negócios de serviços de informática.<br><br>
+
+
+
+3.2  O pagamento da remuneração acima descrita se realizará no primeiro dia de cada mês.<br><br>
+
+3.3  Quaisquer despesas que a Contratada  efetuar com o pagamento de serviços de terceiros correrão exclusivamente por sua conta e responsabilidade.<br><br>
+
+3.4  O pagamento da remuneração mensal somente ocorrerá após o efetivo recebimento da fatura pela Contratante;<br><br>
+
+
+
+<b>Cláusula Quarta : RESCISÃO DO CONTRATO<br><br></b>
+
+
+
+4.1  Além dos casos previstos na legislação própria, o presente CONTRATO poderá ser rescindido de pleno direito, independentemente do procedimento judicial, nos seguintes casos:<br><br>
+
+
+<br>
+4.2  Caso uma das partes venha a ceder, transferir ou caucionar a terceiros, no todo ou em parte, os direitos e obrigações contratuais, sem prévia autorização da outra parte, por escrito;<br><br>
+
+
+
+4.3  Mediante acordo entre as partes;<br><br>
+
+
+
+4.4  Caso seja decretada judicialmente a insolvência, concordata ou falência de qualquer das partes;
+<br><br>
+
+
+4.5  Por exclusiva iniciativa de uma das partes, desde que comunicado à outra, por escrito, com antecedência mínima de 30 (trinta) dias.<br><br>
+
+
+
+4.6  A Contratante poderá rescindir o presente contrato, a qualquer tempo e sem qualquer penalidade.<br><br>
+
+
+
+<b>Cláusula Quinta :RESPONSABILIDADE TRIBUTÁRIA DAS PARTES<br><br></b>
+
+
+
+A contratada se responsabiliza, por todos os recolhimentos de impostos municipais, estaduais e federais,
+        contribuições para a seguridade social, advindos de seus faturamentos relativos ao CONTRATO, bem como
+        da responsabilidade por débitos trabalhistas e previdenciários decorrente  do pessoal envolvido na realização  do objetivo contratual.<br><br>
+
+
+
+        <br><br><div><b>
+            ____________________________<br>
+            Ass:Responsavel Fornecedor</b>
+        </div>
+
+          <br><br>ESTE DOCUMENTO SÓ É VALIDO MEDIANTE A ASSINATURA E CARIMBO DO RESPONSAVEL!<br>
+          <br><br>Belo Horizonte,_____ de____________ de 20____.
+      </div>
+
+    </main>
+    <br><footer class="fixarRodape"><br><br>
+         <div class="text-center"><b>____________________________<br>
+                                        Ass:Diretor Geral Smart
+                                  </b>
+    </footer>
+  </body>
 </html>
-{% endblock %}

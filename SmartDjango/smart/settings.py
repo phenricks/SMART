@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'widget_tweaks',
     'crispy_forms',
+    'django_filters',
+    'mathfilters',
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
@@ -124,4 +126,4 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 LOGIN_REDIRECT_URL = '/home'
-LOGOUT_REDIRECT_URL = '/login'
+LOGOUT_REDIRECT_URL = '/accounts/login'

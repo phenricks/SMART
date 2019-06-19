@@ -1,0 +1,60 @@
+{% extends "_layouts/base.html" %}
+
+{% load crispy_forms_tags %}
+
+{% block title %}Smart - Serviços{% endblock %}
+
+{% block content %}
+
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title"><b>Lista de Serviços</b></h5>
+            {% if servicos|length > 0 %}
+            <hr />
+              <p class="card-text">
+                Aqui está sua lista de <code>Serviços</code>.
+              </p>
+            <a href="{% url 'website:criar_servico' %}" class="btn btn-primary">
+              <span>Cadastrar</span>
+            </a>
+            <p></p>
+            <table class="table table-bordered">
+              <thead class="thead-dark">
+                <tr>
+                  <th scope="col">Nome</th>
+                  <th scope="col">Descrição</th>
+                  <th scope="col" class="text-center">Ações</th>
+                </tr>
+              </thead>
+            <tbody>
+              {% for servicos in servicos %}
+                <tr>
+                  <td>{{ servicos.nome }}</td>
+                  <td>{{ servicos.descricao }}</td>
+                  <td>
+                    <i class="material-icons dp48">
+                    <a href="{% url 'website:atualiza_servico' servicos.id %}">
+                      edit</i></a>
+                    <i class="material-icons dp48">
+                    <a href="{% url 'website:deleta_servico' servicos.id %}">
+                      delete</i></a></td>
+              {% endfor %}
+            </tbody>
+            </table>
+            {% else %}
+            <div class="text-center mt-5 mb-5 jumbotron">
+              <h5>Nenhum serviço cadastrado
+                  Cadastre <a href="{% url 'website:criar_servico' %}">aqui</a> um serviço oferecido
+                  pela SMART</a>
+                </h5>
+            </div>
+            {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends "_layouts/base.html" %}
+
+{% load crispy_forms_tags %}
+
+{% block title %}Smart - Cadastrar Serviço{% endblock %}
+
+{% block content %}
+
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Cadastro de Serviço</h5>
+            <p class="card-text">
+              Complete o formulário abaixo para cadastrar
+              um novo <code>Serviço</code>.
+            </p>
+            <form method="post">
+              {% csrf_token %}
+                <div class="form-group col-md-6 mb-0">
+                  {{ form.nome|as_crispy_field }}
+                </div>
+                <div class="form-group col-md-9 mb-0">
+                  {{ form.descricao|as_crispy_field }}
+                </div>
+              <div class="text-right">
+                <a href="{% url 'website:index' %}" 
+                class="btn btn-outline-primary">Voltar</a>
+                <button class="btn btn-primary">Enviar</button>
+              </div>
+            </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

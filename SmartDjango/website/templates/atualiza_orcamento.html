@@ -1,0 +1,68 @@
+{% extends "_layouts/base.html" %}
+
+{% load widget_tweaks %}
+
+{% block title %}Smart - Correção de Orçamento{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Corrigir o orçamento para <b>{{ orcamento.cliente }}</b></h5>
+          <form method="post">
+            {% csrf_token %}
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text">Cliente</span>
+              </div>
+                {% render_field form.cliente class+="form-control" %}
+            </div>
+
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text">Fornecedor</span>
+              </div>
+                {% render_field form.fornecedor class+="form-control" %}
+            </div>
+
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text">Produto</span>
+              </div>
+                {% render_field form.produto class+="form-control" %}
+            </div>
+            
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text">Preço</span>
+              </div>
+                {% render_field form.preco class+="form-control" %}
+            </div>
+
+	        <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text">Serviço</span>
+              </div>
+                {% render_field form.servico class+="form-control" %}
+            </div>
+
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text">Metros Quadrados</span>
+              </div>
+                {% render_field form.metro class+="form-control" %}
+            </div>
+            <hr />
+            <div class="text-right">
+              <a href="{% url 'website:lista_orcamento' %}" class="btn btn-outline-primary">Voltar</a>
+              <button class="btn btn-primary">Enviar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,5 +1,5 @@
 from django import forms
-from .models import Cliente, Fornecedor
+from .models import Cliente, Fornecedor, Servico, Produto, Orcamento
 
 ESTADOS = (
         ('AC', 'Acre'),
@@ -31,14 +31,68 @@ ESTADOS = (
         ('TO', 'Tocantins')
     )
 
+class OrcamentoForm(forms.ModelForm):
+    metro = forms.DecimalField(
+        label ='Metro² '
+    )
+
+    class Meta:
+
+        model = Orcamento
+
+        fields = {
+            'cliente',
+            'fornecedor',
+            'produto',
+            'preco',
+            'servico',
+            'metro'
+        }
+
+class ProdutoForm(forms.ModelForm):
+    marca = forms.CharField(
+        label='Produto ')
+    descricao = forms.CharField(
+        label='Descricao',
+        widget=forms.Textarea,
+        required = False)
+    class Meta:
+
+        model = Produto
+
+        fields = [
+            'marca',
+            'descricao',
+            'fornecedor'
+        ]
+
+class ServicoForm(forms.ModelForm):
+    nome = forms.CharField(
+        label='Serviço ',
+        widget=forms.TextInput(attrs={'placeholder': 'Nome do Serviço'}))
+    descricao = forms.CharField(
+        label='Descrição ',
+        widget=forms.Textarea,
+        required = False)
+    
+    class Meta:
+
+        model = Servico
+
+        fields = [
+            'nome',
+            'descricao'
+        ]
+
 class ClienteForm(forms.ModelForm):
     nome = forms.CharField(
         label='Nome ',
         widget=forms.TextInput(attrs={'placeholder': 'Nome completo do cliente'}))
     cpf = forms.CharField(
+        max_length=11,
         label='CPF ',
         widget=forms.TextInput(attrs={'placeholder': 'Ex.: 111.111.111-11'}))
-    email = forms.CharField(
+    email = forms.EmailField(
         label='E-mail ',
         widget=forms.TextInput(attrs={'placeholder': 'seuemail@mail.com'}))
     endereco = forms.CharField(
@@ -46,7 +100,8 @@ class ClienteForm(forms.ModelForm):
         widget=forms.TextInput(attrs={'placeholder': 'Rua/Av Número Bairro'})
     )
     complemento = forms.CharField(
-        label='Complemento',
+        label='Complemento (Opcional)',
+        required = False,
         widget=forms.TextInput(attrs={'placeholder': 'Apartamento, Bloco'})
     )
     cidade = forms.CharField(
@@ -58,6 +113,7 @@ class ClienteForm(forms.ModelForm):
         choices=ESTADOS)
     cep = forms.CharField(
         label='CEP ',
+        max_length=8,
         widget=forms.TextInput(attrs={'placeholder': 'Ex.: 11.111-111'}))
 
     class Meta:
@@ -81,11 +137,12 @@ class FornecedorForm(forms.ModelForm):
         widget=forms.TextInput(attrs={'placeholder': 'Padaria Smart'}))
     cnpj = forms.CharField(
         label='CNPJ ',
-        widget=forms.TextInput(attrs={'placeholder': 'Ex.: 11.1111.1111/11'}))
+        max_length=13,
+        widget=forms.TextInput(attrs={'placeholder': 'Ex.: 111111111111'}))
     razao_social = forms.CharField(
         label='Razão Social ',
         widget=forms.TextInput(attrs={'placeholder': 'Padaria Pão de Ló LTDA'}))
-    email = forms.CharField(
+    email = forms.EmailField(
         label='E-mail ',
         widget=forms.TextInput(attrs={'placeholder': 'seuemail@mail.com'}))
     endereco = forms.CharField(
@@ -93,7 +150,8 @@ class FornecedorForm(forms.ModelForm):
         widget=forms.TextInput(attrs={'placeholder': 'Rua/Av Número Bairro'})
     )
     complemento = forms.CharField(
-        label='Complemento ',
+        label='Complemento (Opcional)',
+        required = False,
         widget=forms.TextInput(attrs={'placeholder': 'Apartamento, Bloco'})
     )
     cidade = forms.CharField(
@@ -104,6 +162,7 @@ class FornecedorForm(forms.ModelForm):
         label='Estado ', choices=ESTADOS)
     cep = forms.CharField(
         label='CEP ',
+        max_length=8,
         widget=forms.TextInput(attrs={'placeholder': 'Ex.: 11.111-111'}))
     
 

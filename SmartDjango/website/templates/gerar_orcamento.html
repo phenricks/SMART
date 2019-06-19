@@ -2,7 +2,7 @@
 
 {% load crispy_forms_tags %}
 
-{% block title %}Smart - Cadastrar Cliente{% endblock %}
+{% block title %}Smart - Orçamento{% endblock %}
 
 {% block content %}
 
@@ -11,43 +11,35 @@
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
       <div class="card">
         <div class="card-body">
-          <h5 class="card-title">Cadastro de Cliente</h5>
+          <h5 class="card-title"><b>Gerar Orçamento</b></h5><hr \>
             <p class="card-text">
-              Complete o formulário abaixo para cadastrar
-              um novo <code>Cliente</code>.
             </p>
             <form method="post">
               {% csrf_token %}
               <div class="form-row">
                 <div class="form-group col-md-6 mb-0">
-                  {{ form.nome|as_crispy_field }}
+                  {{ form.cliente|as_crispy_field }}
                 </div>
-                <div class="form-group col-md-3 mb-0">
-                  {{ form.cpf|as_crispy_field }}
-                </div>
-                <div class="form-group col-md-3 mb-0">
-                  {{ form.email|as_crispy_field }}
+                <div class="form-group col-md-6 mb-0">
+                  {{ form.fornecedor|as_crispy_field }}
                 </div>
               </div>
               <div class="form-row">
-                <div class="form-group col-md-9 mb-0">
-                  {{ form.endereco|as_crispy_field }}
+                <div class="form-group col-md-3 mb-0">
+                  {{ form.servico|as_crispy_field }}
                 </div>
                 <div class="form-group col-md-3 mb-0">
-                  {{ form.complemento|as_crispy_field }}
-                </div>
-                <div class="form-group col-md-6 mb-0">
-                  {{ form.cidade|as_crispy_field }}
+                  {{ form.produto|as_crispy_field }}
                 </div>
                 <div class="form-group col-md-3 mb-0">
-                  {{ form.estado|as_crispy_field }}
+                  {{ form.preco|as_crispy_field }}
                 </div>
                 <div class="form-group col-md-3 mb-0">
-                  {{ form.cep|as_crispy_field }}
+                  {{ form.metro|as_crispy_field }}
                 </div>
               </div>
               <div class="text-right">
-                <a href="{% url 'website:filtra_cliente' %}" 
+                <a href="{% url 'website:lista_orcamento' %}" 
                 class="btn btn-outline-primary">Voltar</a>
                 <button class="btn btn-primary">Enviar</button>
               </div>
