@@ -25,21 +25,28 @@ Na pasta do projeto, no caso (SmartDjango), executa-se o comando abaixo para cir
 ```bash
 python -m venv NOMEVIRTUALENV
 ```
+
+
 Após sua criação execute:
 
 ```bash
 cd NOMEVIRTUALENV
 ```
-para ativar sua virtualenv:
+
+
+Execute o comando abaixo para ativar sua virtualenv:
 
 ```bash
 source NOMEVIRTUALENV/bin/activate
 ```
-no caso do windows:
+
+
+Execute o comando abaixo para ativar sua virtualenv caso esteja utilizando windows:
 
 ```bash
 NOMEVIRTUALENV\Scripts\activate
 ```
+
 Após sua ativação, proxiga instalando as dependencias do projeto:
 
 ```bash
