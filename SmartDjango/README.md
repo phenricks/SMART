@@ -20,6 +20,12 @@ sudo apt-get install python python3
 **OBS: É viavel a criação de uma virtualenv para isolar sua maquina ao instalar dependencias da aplicação, para que assim
 possamos ter um ambiente voltado ao projeto sem interferir o seu sistema.
 
+Acesse a pasta SmartDjango para criarmos a virtualenv:
+
+```bash
+cd SmartDjango
+```
+
 Na pasta do projeto, no caso (SmartDjango), executa-se o comando abaixo para cirar sua virtualenv:
 
 ```bash
@@ -27,19 +33,12 @@ python -m venv NOMEVIRTUALENV
 ```
 
 
-Após sua criação execute:
-
-```bash
-cd NOMEVIRTUALENV
-```
-
-
-Execute o comando abaixo para ativar sua virtualenv:
+Após sua criação executeo comando abaixo para ativar sua virtualenv:
 
 ```bash
 source NOMEVIRTUALENV/bin/activate
 ```
-
+**ATENÇÃO USUARIOS DE WINDOWS**
 
 Execute o comando abaixo para ativar sua virtualenv caso esteja utilizando windows:
 
