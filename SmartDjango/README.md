@@ -47,7 +47,7 @@ Execute o comando abaixo para ativar sua virtualenv caso esteja utilizando windo
 NOMEVIRTUALENV\Scripts\activate
 ```
 
-Após sua ativação, proxiga instalando as dependencias do projeto:
+Após sua ativação, prossiga instalando as dependencias do projeto:
 
 ```bash
 pip3 install -U Django
